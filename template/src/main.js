@@ -12,6 +12,7 @@ import router from './router'
 {{#vuex}}
 import vuex from 'vuex'
 import store from './store'
+Vue.prototype.$store = store
 Vue.use(vuex)
 {{/vuex}}
 
