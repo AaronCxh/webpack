@@ -6,13 +6,23 @@ import Vue from 'vue'
 import App from './App'
 {{#router}}
 import router from './router'
+
 {{/router}}
+
+{{#vuex}}
+import vuex from 'vuex'
+import store from './store'
+Vue.use(vuex)
+{{/vuex}}
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  {{#vuex}}
+  store,
+  {{/vuex}}
   {{#router}}
   router,
   {{/router}}
